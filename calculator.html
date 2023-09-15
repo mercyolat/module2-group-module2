@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>calculator</title>
+
+<style>
+    table,td,tr{
+    margin: auto;}
+</style>
+</head>
+<body>
+    <form action="calculate.php" target="iframe" method="get">
+<h1>Simple Calculator</h1><br>
+<table>
+
+<tr>
+<td>
+First:<input type="text" name="n1"><br>
+Second:<input type="text" name="n2"> <br>
+<input type="radio" id="plus" name="s1" value="plus"><label for="plus">+</label>
+<input type="radio" id="minus" name="s1" value="minus"><label for="minus">-</label>
+<input type="radio" id="multi" name="s1" value="multi"><label for="multi">*</label>
+<input type="radio" id="divide" name="s1" value="divide"><label for="divide">/</label>
+<input type="submit" value="calculate" style="width:80px">
+<!--
+<input type="radio" name="s2" value="-">-
+<input type="radio" name="s3" value="*">*
+<input type="radio" name="s4" value="/">/<br>
+
+<!--<br>Result: <input type='text' value="<?php echo $ans; ?>"><br>-->
+</td>
+</tr>
+</table>
+</form>
+
+
+<!--
+
+-->
+<iframe src="calculate.php" name=""iframe"></iframe>
+</body>
+</html>
