@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
 <h1>Log in</h1><br>
      <label for="uname"><b>Username</b></label>
       Please input username:<input type="username" name="username" required><br>
