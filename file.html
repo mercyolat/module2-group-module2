@@ -14,8 +14,10 @@
 <div class="container">
   <label for="uname"><b>Username</b></label>
    Please input username:<input type="username" name="username" required><br>
+   <form class=login action="dashboard.php" method="POST">
    <input type="submit" value="Login">
    <input type="checkbox" checked="checked" name="remember"> Remember me
+</form>
 </label>
 </div>
 
@@ -25,16 +27,51 @@
     <button type="button" class="cancelbtn">Cancel</button>
     
   </div>
-</form>
-
-<h2>Upload File</h2>
-<form method="POST" enctype="multipart/form-data">
-    <input type="file" name="file" required>
-    <input type="submit" value="Upload">
+  <?php
 
 
+  if (isset($_POST['username'])){
+      echo "login success";
+      $username=$_POST['username'];
+      echo $username;
+      $user_file = fopen("/home/mercy/users.txt", "r");
+    
+      $flag = false;
+      while(!feof($user_file)){
+          $getname = fgets($user_file);
+          echo $getname;
+          echo trim($getname);
+          if (trim($getname) == $username){
+              $flag = true;
+              break;
+          }
+  
+      }
+      fclose($user_file);
+  
+      if ($falg == true)
+  {
+      session_start();
+      $_SESSION['usr'] = $username;
+      $_SESSION['login'] = true;
+      header("Location: main.php");
+      exit;
+  }
+  else{
+      echo "False";
+  }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  ?>
 
-</form>
+
 
 </body>
 </html>

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-<h1>Welcome, <?php echo $username; ?></h1>
-//view files 
 
-<h2>Your Files</h2>
+<h2> Welcome! Upload your Files here</h2>//view files 
+
+<h2> Uploaded Files </h2>
 
     
 
